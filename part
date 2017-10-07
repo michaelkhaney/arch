@@ -4,21 +4,21 @@
 #Modified from helmuthdu mailto: helmuthdu[at]gmail[dot]com
 #-------------------------------------------------------------------------------
 
-nv=/dev/nvme0n1
-nv1=/dev/nvme0n1p1
-nv2=/dev/nvme0n1p2
-nv3=/dev/nvme0n1p3
-nv4=/dev/nvme0n1p4
+#nv=/dev/nvme0n1
+#nv1=/dev/nvme0n1p1
+#nv2=/dev/nvme0n1p2
+#nv3=/dev/nvme0n1p3
+#nv4=/dev/nvme0n1p4
 
-sgdisk -z $nv
+#sgdisk -z $nv
 
-sgdisk -n 1::+1G -t 1:ef00 -c 1:boot $nv
-sgdisk -n 2::+8G -t 2:8200 -c 2:swap $nv
-sgdisk -n 3::+30G -t 3:8300 -c 3:root $nv
-sgdisk -n 4::: -t 4:8300 -c 4:home $nv
+#sgdisk -n 1::+1G -t 1:ef00 -c 1:boot $nv
+#sgdisk -n 2::+8G -t 2:8200 -c 2:swap $nv
+#sgdisk -n 3::+30G -t 3:8300 -c 3:root $nv
+#sgdisk -n 4::: -t 4:8300 -c 4:home $nv
 
-mkfs.fat -F32 $nv1
-mkswap $nv2
-swapon $nv2
-mkfs.ext4 $nv3
-mkfs.ext4 $nv4
+#mkfs.fat -F32 $nv1
+#mkswap $nv2
+#swapon $nv2
+#mkfs.ext4 $nv3
+#mkfs.ext4 $nv4
