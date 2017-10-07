@@ -22,3 +22,11 @@ nv4=/dev/nvme0n1p4
 #swapon $nv2
 #mkfs.ext4 $nv3
 #mkfs.ext4 $nv4
+
+
+sgdisk -z $nv
+sgdisk -n 1::+1G -t 1:ef00 -c 1:boot $nv
+sgdisk -n 2::+8G -t 2:8200 -c 2:swap $nv
+sgdisk -n 3::+30G -t 3:8300 -c 3:root $nv
+sgdisk -n 4::: -t 4:8300 -c 4:home $nv
+sgdisk -p $nv
