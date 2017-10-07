@@ -4,11 +4,11 @@
 #Modified from helmuthdu mailto: helmuthdu[at]gmail[dot]com
 #-------------------------------------------------------------------------------
 
-#nv=/dev/nvme0n1
-#nv1=/dev/nvme0n1p1
-#nv2=/dev/nvme0n1p2
-#nv3=/dev/nvme0n1p3
-#nv4=/dev/nvme0n1p4
+nv=/dev/nvme0n1
+nv1=/dev/nvme0n1p1
+nv2=/dev/nvme0n1p2
+nv3=/dev/nvme0n1p3
+nv4=/dev/nvme0n1p4
 
 #sgdisk -z $nv
 
