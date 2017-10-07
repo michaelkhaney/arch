@@ -1,0 +1,23 @@
+#!/bin/bash
+#-------------------------------------------------------------------------------
+#Modified by mkhaney mailto: michaelkhaney[at]gmail[dot]com
+#Modified from helmuthdu mailto: helmuthdu[at]gmail[dot]com
+#-------------------------------------------------------------------------------
+
+# Create variable "nv*" for target block device and partitions.
+nv=/dev/nvme0n1
+nv1=/dev/nvme0n1p1
+nv2=/dev/nvme0n1p2
+nv3=/dev/nvme0n1p3
+nv4=/dev/nvme0n1p4
+
+mkdir /mnt
+mount $nv3 /mnt
+
+mkdir /mnt/boot
+mount $nv1 /mnt/boot
+
+mkdir /mnt/home
+mount $nv4 /mnt/home
+
+ls /mnt
