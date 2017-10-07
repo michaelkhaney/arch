@@ -1,0 +1,18 @@
+#!/bin/bash
+#-------------------------------------------------------------------------------
+#Modified by mkhaney mailto: michaelkhaney[at]gmail[dot]com
+#Modified from helmuthdu mailto: helmuthdu[at]gmail[dot]com
+#-------------------------------------------------------------------------------
+
+# Create variable "nv*" for target block device and partitions.
+nv=/dev/nvme0n1
+nv1=/dev/nvme0n1p1
+nv2=/dev/nvme0n1p2
+nv3=/dev/nvme0n1p3
+nv4=/dev/nvme0n1p4
+
+mkfs.fat -F32 $nv1
+mkswap $nv2
+swapon $nv2
+mkfs.ext4 $nv3
+mkfs.ext4 $nv4
